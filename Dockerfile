@@ -5,6 +5,7 @@ RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple flask flask-sqlalche
 WORKDIR /root
 COPY viewer.py /root/
 COPY templates /root/templates
+COPY utils /root/utils
 VOLUME ["/root/instance"]
 EXPOSE 5000
 CMD ["/usr/bin/python3", "viewer.py"]
