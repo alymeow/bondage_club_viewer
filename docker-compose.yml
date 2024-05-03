@@ -1,0 +1,8 @@
+services:
+  bcviewer:
+    image: bcv:latest
+    restart: always
+    volumes: 
+      - ./instance:/root/instance
+    ports:
+      - 9999:5000

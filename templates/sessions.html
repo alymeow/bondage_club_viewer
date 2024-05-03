@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sessions</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container font-monospace" style="max-width: 99%">
+    <h1 class="text-center">{{ name }} [ {{ id }} ]</h1>
+    <table class="table text-center">
+        <thead>
+        <tr>
+            <th>Time</th>
+            <th>Session</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for data in table_data %}
+            <tr>
+                <td><a href="/t/{{ data.timestamp }}">{{ data.timestamp }}</a></td>
+                <td><a href="{{ data.url }}">{{ data.session }}</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
